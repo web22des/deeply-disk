@@ -20,24 +20,113 @@ Features:
 Inside of your Astro project, you'll see the following folders and files:
 
 ```text
-├── .github/
-├── .vscode/
-├── public/
-├── scripts/
-├── src/
-│   ├── assets/
-│   ├── components/
-|   │   ├── partials/
-|   │   ├── sections/
-|   │   └── ui/
-│   ├── content/
-│   ├── layouts/
-│   |── pages/
-│   └── styles/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
+📦base-cource
+ ┣ 📂.astro
+ ┃ ┣ 📂collections
+ ┃ ┣ 📜content-assets.mjs
+ ┃ ┣ 📜content-modules.mjs
+ ┃ ┣ 📜content.d.ts
+ ┃ ┣ 📜data-store.json
+ ┃ ┣ 📜settings.json
+ ┃ ┗ 📜types.d.ts
+ ┣ 📂.github
+ ┃ ┗ 📂workflows
+ ┃ ┃ ┗ 📜deploy.yml
+ ┣ 📂.vscode
+ ┃ ┣ 📜2025.code-snippets
+ ┃ ┣ 📜extensions.json
+ ┃ ┣ 📜launch.json
+ ┃ ┗ 📜settings.json
+ ┣ 📂public
+ ┃ ┣ 📂favicon
+ ┃ ┃ ┣ 📜android-chrome-192x192.png
+ ┃ ┃ ┣ 📜android-chrome-512x512.png
+ ┃ ┃ ┣ 📜apple-touch-icon.png
+ ┃ ┃ ┣ 📜browserconfig.xml
+ ┃ ┃ ┣ 📜favicon-16x16.png
+ ┃ ┃ ┣ 📜favicon-32x32.png
+ ┃ ┃ ┣ 📜favicon.ico
+ ┃ ┃ ┣ 📜mstile-144x144.png
+ ┃ ┃ ┣ 📜mstile-150x150.png
+ ┃ ┃ ┣ 📜mstile-310x150.png
+ ┃ ┃ ┣ 📜mstile-310x310.png
+ ┃ ┃ ┣ 📜mstile-70x70.png
+ ┃ ┃ ┣ 📜safari-pinned-tab.svg
+ ┃ ┃ ┗ 📜site.webmanifest
+ ┃ ┣ 📂fonts
+ ┃ ┃ ┣ 📜Roboto-Bold.woff2
+ ┃ ┃ ┣ 📜Roboto-Medium.woff2
+ ┃ ┃ ┣ 📜Roboto-Regular.woff2
+ ┃ ┃ ┗ 📜icomoon.woff2
+ ┃ ┗ 📂images
+ ┃ ┃ ┗ 📂logo
+ ┃ ┃ ┃ ┣ 📜logo-dark.svg
+ ┃ ┃ ┃ ┣ 📜logo-light.svg
+ ┃ ┃ ┃ ┗ 📜logo.svg
+ ┣ 📂scripts
+ ┣ 📂src
+ ┃ ┣ 📂assets
+ ┃ ┣ 📂components
+ ┃ ┃ ┣ 📂partials
+ ┃ ┃ ┃ ┣ 📜Footer.astro
+ ┃ ┃ ┃ ┣ 📜Head.astro
+ ┃ ┃ ┃ ┗ 📜Header.astro
+ ┃ ┃ ┗ 📂ui
+ ┃ ┃ ┃ ┣ 📜Images.astro
+ ┃ ┃ ┃ ┣ 📜Link.astro
+ ┃ ┃ ┃ ┣ 📜Logo.astro
+ ┃ ┃ ┃ ┣ 📜MenuToggle.astro
+ ┃ ┃ ┃ ┣ 📜SocialContact.astro
+ ┃ ┃ ┃ ┗ 📜ThemeToggle.astro
+ ┃ ┣ 📂content
+ ┃ ┣ 📂layouts
+ ┃ ┃ ┗ 📜PagesLayout.astro
+ ┃ ┣ 📂pages
+ ┃ ┃ ┣ 📜catalog.astro
+ ┃ ┃ ┣ 📜contacts.astro
+ ┃ ┃ ┗ 📜index.astro
+ ┃ ┣ 📂styles
+ ┃ ┃ ┣ 📂base
+ ┃ ┃ ┃ ┣ 📂mixins
+ ┃ ┃ ┃ ┃ ┣ 📜_adaptive.scss
+ ┃ ┃ ┃ ┃ ┣ 📜_counter.scss
+ ┃ ┃ ┃ ┃ ┣ 📜_fontfase.scss
+ ┃ ┃ ┃ ┃ ┣ 📜_math.scss
+ ┃ ┃ ┃ ┃ ┣ 📜_rem-em.scss
+ ┃ ┃ ┃ ┃ ┣ 📜_transparent-color.scss
+ ┃ ┃ ┃ ┃ ┣ 📜_truncate-text.scss
+ ┃ ┃ ┃ ┃ ┣ 📜_utilites.scss
+ ┃ ┃ ┃ ┃ ┣ 📜adaptiveValue.scss
+ ┃ ┃ ┃ ┃ ┗ 📜grid.scss
+ ┃ ┃ ┃ ┣ 📜base.scss
+ ┃ ┃ ┃ ┣ 📜button.scss
+ ┃ ┃ ┃ ┣ 📜common.scss
+ ┃ ┃ ┃ ┣ 📜media-new.scss
+ ┃ ┃ ┃ ┣ 📜media.scss
+ ┃ ┃ ┃ ┣ 📜mixins.scss
+ ┃ ┃ ┃ ┣ 📜null.scss
+ ┃ ┃ ┃ ┣ 📜scroll.scss
+ ┃ ┃ ┃ ┗ 📜variables.scss
+ ┃ ┃ ┣ 📂fonts
+ ┃ ┃ ┃ ┣ 📜fonts.scss
+ ┃ ┃ ┃ ┗ 📜icons.scss
+ ┃ ┃ ┣ 📂libs
+ ┃ ┃ ┃ ┣ 📜form.scss
+ ┃ ┃ ┃ ┗ 📜spollers.scss
+ ┃ ┃ ┣ 📂themes
+ ┃ ┃ ┃ ┗ 📂v_01
+ ┃ ┃ ┃ ┃ ┣ 📜M3.json
+ ┃ ┃ ┃ ┃ ┣ 📜dark.scss
+ ┃ ┃ ┃ ┃ ┗ 📜light.scss
+ ┃ ┃ ┣ 📂utils
+ ┃ ┃ ┃ ┗ 📜_focus-visible.scss
+ ┃ ┃ ┗ 📜global.scss
+ ┃ ┗ 📂templates
+ ┣ 📜.gitignore
+ ┣ 📜README.md
+ ┣ 📜astro.config.mjs
+ ┣ 📜package.json
+ ┗ 📜tsconfig.json
 ```
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
