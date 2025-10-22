@@ -2,9 +2,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
-    "[astro]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
+
     "prettier.printWidth": 80,
     "prettier.bracketSameLine": false
 }
