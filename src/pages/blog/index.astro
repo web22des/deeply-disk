@@ -57,11 +57,15 @@ const posts = (await getCollection("blog")).sort(
     @use "@styles/base/media-new.scss" as *;
     @use "@styles/base/variables.scss" as *;
     .grup-content {
-        //767px и более
         @media (min-width: $tablet-small) {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: var(--space-grid-gap);
+        }
+
+        //1023px и более
+        @media (min-width: $tablet-medium) {
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 
