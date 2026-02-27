@@ -1,7 +1,7 @@
 {
     "name": "deeply-disk",
     "type": "module",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "scripts": {
         "dev": "astro dev",
         "build": "astro build",
@@ -9,7 +9,7 @@
         "astro": "astro"
     },
     "dependencies": {
-        "astro": "^5.14.1"
+        "astro": "^5.18.0"
     },
     "devDependencies": {
         "sass-embedded": "^1.93.2"

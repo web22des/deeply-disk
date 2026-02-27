@@ -1,141 +1,4 @@
-# Astro Starter Kit: Blog
-
-```sh
-npm create astro@latest -- --template blog
-```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-Features:
-
--   ✅ Minimal styling (make it your own!)
--   ✅ 100/100 Lighthouse performance
--   ✅ SEO-friendly with canonical URLs and OpenGraph data
--   ✅ Sitemap support
--   ✅ RSS Feed support
--   ✅ Markdown & MDX support
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-📦base-cource
- ┣ 📂.astro
- ┃ ┣ 📂collections
- ┃ ┣ 📜content-assets.mjs
- ┃ ┣ 📜content-modules.mjs
- ┃ ┣ 📜content.d.ts
- ┃ ┣ 📜data-store.json
- ┃ ┣ 📜settings.json
- ┃ ┗ 📜types.d.ts
- ┣ 📂.github
- ┃ ┗ 📂workflows
- ┃ ┃ ┗ 📜deploy.yml
- ┣ 📂.vscode
- ┃ ┣ 📜2025.code-snippets
- ┃ ┣ 📜extensions.json
- ┃ ┣ 📜launch.json
- ┃ ┗ 📜settings.json
- ┣ 📂public
- ┃ ┣ 📂favicon
- ┃ ┃ ┣ 📜android-chrome-192x192.png
- ┃ ┃ ┣ 📜android-chrome-512x512.png
- ┃ ┃ ┣ 📜apple-touch-icon.png
- ┃ ┃ ┣ 📜browserconfig.xml
- ┃ ┃ ┣ 📜favicon-16x16.png
- ┃ ┃ ┣ 📜favicon-32x32.png
- ┃ ┃ ┣ 📜favicon.ico
- ┃ ┃ ┣ 📜mstile-144x144.png
- ┃ ┃ ┣ 📜mstile-150x150.png
- ┃ ┃ ┣ 📜mstile-310x150.png
- ┃ ┃ ┣ 📜mstile-310x310.png
- ┃ ┃ ┣ 📜mstile-70x70.png
- ┃ ┃ ┣ 📜safari-pinned-tab.svg
- ┃ ┃ ┗ 📜site.webmanifest
- ┃ ┣ 📂fonts
- ┃ ┃ ┣ 📜Roboto-Bold.woff2
- ┃ ┃ ┣ 📜Roboto-Medium.woff2
- ┃ ┃ ┣ 📜Roboto-Regular.woff2
- ┃ ┃ ┗ 📜icomoon.woff2
- ┃ ┗ 📂images
- ┃ ┃ ┗ 📂logo
- ┃ ┃ ┃ ┣ 📜logo-dark.svg
- ┃ ┃ ┃ ┣ 📜logo-light.svg
- ┃ ┃ ┃ ┗ 📜logo.svg
- ┣ 📂scripts
- ┣ 📂src
- ┃ ┣ 📂assets
- ┃ ┣ 📂components
- ┃ ┃ ┣ 📂partials
- ┃ ┃ ┃ ┣ 📜Footer.astro
- ┃ ┃ ┃ ┣ 📜Head.astro
- ┃ ┃ ┃ ┗ 📜Header.astro
- ┃ ┃ ┗ 📂ui
- ┃ ┃ ┃ ┣ 📜Images.astro
- ┃ ┃ ┃ ┣ 📜Link.astro
- ┃ ┃ ┃ ┣ 📜Logo.astro
- ┃ ┃ ┃ ┣ 📜MenuToggle.astro
- ┃ ┃ ┃ ┣ 📜SocialContact.astro
- ┃ ┃ ┃ ┗ 📜ThemeToggle.astro
- ┃ ┣ 📂content
- ┃ ┣ 📂layouts
- ┃ ┃ ┗ 📜PagesLayout.astro
- ┃ ┣ 📂pages
- ┃ ┃ ┣ 📜catalog.astro
- ┃ ┃ ┣ 📜contacts.astro
- ┃ ┃ ┗ 📜index.astro
- ┃ ┣ 📂styles
- ┃ ┃ ┣ 📂base
- ┃ ┃ ┃ ┣ 📂mixins
- ┃ ┃ ┃ ┃ ┣ 📜_adaptive.scss
- ┃ ┃ ┃ ┃ ┣ 📜_counter.scss
- ┃ ┃ ┃ ┃ ┣ 📜_fontfase.scss
- ┃ ┃ ┃ ┃ ┣ 📜_math.scss
- ┃ ┃ ┃ ┃ ┣ 📜_rem-em.scss
- ┃ ┃ ┃ ┃ ┣ 📜_transparent-color.scss
- ┃ ┃ ┃ ┃ ┣ 📜_truncate-text.scss
- ┃ ┃ ┃ ┃ ┣ 📜_utilites.scss
- ┃ ┃ ┃ ┃ ┣ 📜adaptiveValue.scss
- ┃ ┃ ┃ ┃ ┗ 📜grid.scss
- ┃ ┃ ┃ ┣ 📜base.scss
- ┃ ┃ ┃ ┣ 📜button.scss
- ┃ ┃ ┃ ┣ 📜common.scss
- ┃ ┃ ┃ ┣ 📜media-new.scss
- ┃ ┃ ┃ ┣ 📜media.scss
- ┃ ┃ ┃ ┣ 📜mixins.scss
- ┃ ┃ ┃ ┣ 📜null.scss
- ┃ ┃ ┃ ┣ 📜scroll.scss
- ┃ ┃ ┃ ┗ 📜variables.scss
- ┃ ┃ ┣ 📂fonts
- ┃ ┃ ┃ ┣ 📜fonts.scss
- ┃ ┃ ┃ ┗ 📜icons.scss
- ┃ ┃ ┣ 📂libs
- ┃ ┃ ┃ ┣ 📜form.scss
- ┃ ┃ ┃ ┗ 📜spollers.scss
- ┃ ┃ ┣ 📂themes
- ┃ ┃ ┃ ┗ 📂v_01
- ┃ ┃ ┃ ┃ ┣ 📜M3.json
- ┃ ┃ ┃ ┃ ┣ 📜dark.scss
- ┃ ┃ ┃ ┃ ┗ 📜light.scss
- ┃ ┃ ┣ 📂utils
- ┃ ┃ ┃ ┗ 📜_focus-visible.scss
- ┃ ┃ ┗ 📜global.scss
- ┃ ┗ 📂templates
- ┣ 📜.gitignore
- ┣ 📜README.md
- ┣ 📜astro.config.mjs
- ┣ 📜package.json
- ┗ 📜tsconfig.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
-
-Any static assets, like images, can be placed in the `public/` directory.
+# Astro Starter Kit
 
 ## 🧞 Commands
 
@@ -149,14 +12,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
 
 ### Содержание стартового шаблона (описаны изменения от дефолтного шаблона)
 
@@ -200,9 +55,9 @@ This theme is based off of the lovely [Bear Blog](https://github.com/HermanMarti
 
 ### Правила увеличения версий:
 
--   PATCH (+0.0.1) - исправил баг, опечатку
--   MINOR (+0.1.0) - добавил новый функционал (блог)
--   MAJOR (+1.0.0) - ломающие изменения
+- PATCH (+0.0.1) - исправил баг, опечатку
+- MINOR (+0.1.0) - добавил новый функционал (блог)
+- MAJOR (+1.0.0) - ломающие изменения
 
 # deeply-disk `"version": "0.1.0"`
 
@@ -226,9 +81,9 @@ This theme is based off of the lovely [Bear Blog](https://github.com/HermanMarti
 
 2. добавлены
 
--   `src/pages/blog`
--   `src/pages/blog/[...slug].astro`
--   `src/pages/blog/index.astro`
+- `src/pages/blog`
+- `src/pages/blog/[...slug].astro`
+- `src/pages/blog/index.astro`
 
 ```txt
 📦pages
@@ -242,8 +97,8 @@ This theme is based off of the lovely [Bear Blog](https://github.com/HermanMarti
 
 3. добавлены
 
--   `src/consts.ts`
--   `src/content.config.ts`
+- `src/consts.ts`
+- `src/content.config.ts`
 
 ```txt
 📦src
@@ -335,3 +190,9 @@ This theme is based off of the lovely [Bear Blog](https://github.com/HermanMarti
  ┣ 📜consts.ts          ✅ — добавлено
  ┗ 📜content.config.ts  ✅ — добавлено
 ```
+
+## 📜 История версий
+
+### deeply-disk `"version": "0.2.0"`
+
+Подробный список изменений доступен в файле `CHANGELOG.md`
