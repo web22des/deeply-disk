@@ -1,0 +1,68 @@
+---
+// src/components/ui/title/TitleV01.astro
+export interface TitleV01Props {
+    title?: string;
+    subtitle?: string;
+}
+
+const {
+    title = "Заголовок секции",
+    subtitle = "Код - это история, которую ты оставляешь после себя. Пиши её так, чтобы другие хотели читать.",
+} = Astro.props;
+---
+
+<div class="section-title js-animate js-animate--up" data-js="animate">
+    <h2>{title}</h2>
+    <p>{subtitle}</p>
+</div>
+
+<style lang="scss">
+    @use "@styles/base/media-new" as *;
+    .section-title {
+        margin-bottom: var(--space-xxl);
+        h2 {
+            font-size: var(--font-size-display-small);
+            margin-bottom: var(--space-lg);
+        }
+        p {
+            font-size: var(--font-size-headline-small);
+            padding-left: 24px;
+            position: relative;
+            max-width: 552px;
+            &::before {
+                position: absolute;
+                content: "";
+                width: 16px;
+                height: 6px;
+                left: 0;
+                top: 0;
+                background-color: var(--md-sys-color-primary);
+            }
+        }
+    }
+    //599px и более
+    @media (min-width: $mobile-large) {
+        .section-title {
+            margin-bottom: var(--space-xxl);
+            h2 {
+                font-size: var(--font-size-display-small);
+                margin-bottom: var(--space-lg);
+            }
+            p {
+                font-size: var(--font-size-headline-small);
+                padding-left: 96px;
+                position: relative;
+                max-width: 648px;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 72px;
+                    height: 6px;
+                    left: 0;
+                    top: 0;
+                    background-color: var(--md-sys-color-primary);
+                }
+            }
+        }
+    }
+</style>

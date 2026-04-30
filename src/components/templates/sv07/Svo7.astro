@@ -1,0 +1,22 @@
+---
+// src/components/templates/sv07/Svo7.astro
+import Tv01 from "@components/ui/tabs/tv01/Tv01.astro";
+import SectionTitleVar01 from "@components/ui/title/SectionTitleVar01.astro";
+
+export interface Sv08Props {
+    title: string;
+    subtitle: string;
+    tabs?: any[];
+    id?: string;
+    class?: string;
+}
+
+const { title, subtitle, tabs } = Astro.props;
+---
+
+<section class="sv07 animate">
+    <div class="sv07__container">
+        <SectionTitleVar01 {title} {subtitle} />
+        <Tv01 {tabs} />
+    </div>
+</section>

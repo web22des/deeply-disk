@@ -1,0 +1,38 @@
+---
+// src/components/templates/sv05/Sv05.astro
+import Cv04 from "@components/ui/card/Cv04.astro";
+
+import type { Props as Cv04Props } from "@components/ui/card/Cv04.astro";
+
+export interface Props {
+    descr?: string;
+    card?: Cv04Props;
+}
+
+const { descr = "Описание секции, призыв к действию. Короткий абзац ", card } =
+    Astro.props;
+---
+
+<div class="sv05">
+    <div class="sv05__container">
+        <Cv04 {...card} />
+        <p>{descr}</p>
+    </div>
+</div>
+
+<style lang="scss">
+    .sv05 {
+        background-color: var(--md-sys-color-surface-variant);
+        &__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            p {
+                text-align: center;
+                padding-top: var(--space-all-card);
+                font-size: var(--font-size-headline-small);
+            }
+        }
+    }
+</style>

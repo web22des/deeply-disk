@@ -1,0 +1,55 @@
+---
+// src/components/templates/sv06/Sv06.astro
+import { Image } from "astro:assets";
+import img01 from "@assets/temp/images/rutube.jpg";
+import TitleV01 from "@components/ui/title/TitleV01.astro";
+import type { TitleV01Props } from "@components/ui/title/TitleV01.astro";
+import Cv05 from "@components/ui/card/Cv05.astro";
+import type { Props as Cv05Props } from "@components/ui/card/Cv05.astro";
+
+export interface Props {
+    headTitle?: TitleV01Props;
+    card?: Cv05Props;
+    src?: ImageMetadata;
+    alt?: string;
+}
+
+const {
+    headTitle,
+    src = img01,
+    alt = "Дефолтное описание изображения",
+} = Astro.props;
+
+export const cards = Array(6).fill({});
+---
+
+<section class="sv06 animate">
+    <div class="sv06__container">
+        <TitleV01 {...headTitle} />
+        <div class="sv06__grup">
+            {cards.map((item) => <Cv05 {...item} />)}
+        </div>
+        <div class="sv06__footer">
+            <Image src={src} alt={alt} />
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    @use "@styles/base/mixins/grid.scss" as grid;
+    .sv06 {
+        &__container {
+        }
+        &__grup {
+            @include grid.grid-3-columns(24px);
+            margin-bottom: var(--space-xxl);
+        }
+        &__footer {
+            img {
+                max-width: 1128px;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+</style>

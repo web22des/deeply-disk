@@ -1,0 +1,68 @@
+/* src/styles/base/animations.scss */
+
+/* 
+ * 📌 Базовые настройки анимации появления 
+ * Вынесены в переменные для гибкости
+ */
+:root {
+    --anim-duration: 0.6s;
+    --anim-distance: 30px;
+    --anim-easing: cubic-bezier(
+        0.25,
+        0.46,
+        0.45,
+        0.94
+    ); /* Плавное замедление */
+}
+
+/* 
+ * 📌 Базовый класс .js-animate 
+ * Скрывает элемент до начала анимации 
+ */
+.js-animate {
+    opacity: 0;
+    will-change: opacity, transform; /* Подсказка браузеру для оптимизации */
+    transition:
+        opacity var(--anim-duration) var(--anim-easing),
+        transform var(--anim-duration) var(--anim-easing);
+}
+
+/* 
+ * 📌 Состояние видимости (добавляется через JS) 
+ */
+.js-animate.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+/* 
+ * 📌 Направления (Модификаторы) 
+ * Задают начальную позицию сдвига
+ */
+.js-animate--up {
+    transform: translate3d(0, var(--anim-distance), 0);
+}
+
+.js-animate--down {
+    transform: translate3d(0, calc(var(--anim-distance) * -1), 0);
+}
+
+.js-animate--left {
+    transform: translate3d(var(--anim-distance), 0, 0);
+}
+
+.js-animate--right {
+    transform: translate3d(calc(var(--anim-distance) * -1), 0, 0);
+}
+
+/* 
+ * 📌 Доступность (a11y) 
+ * Если пользователь отключил анимации в системе — убираем движение
+ */
+@media (prefers-reduced-motion: reduce) {
+    .js-animate {
+        transition: none;
+        opacity: 1;
+        transform: none;
+    }
+}

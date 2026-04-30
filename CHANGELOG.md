@@ -21,27 +21,91 @@
  ┣ 📂assets
  ┃ ┣ 📂programming
  ┃ ┃ ┗ 📜06.jpg
+ ┃ ┣ 📂temp
+ ┃ ┃ ┣ 📂avatars
+ ┃ ┃ ┃ ┣ 📜av-01.png
+ ┃ ┃ ┃ ┣ 📜av-02.png
+ ┃ ┃ ┃ ┣ 📜av-03.png
+ ┃ ┃ ┃ ┣ 📜av-04.png
+ ┃ ┃ ┃ ┗ 📜av-05.png
+ ┃ ┃ ┗ 📂images
+ ┃ ┃ ┃ ┣ 📜360-01.jpg
+ ┃ ┃ ┃ ┣ 📜360-02.jpg
+ ┃ ┃ ┃ ┣ 📜360х168-01.jpg
+ ┃ ┃ ┃ ┣ 📜360х168-02.jpg
+ ┃ ┃ ┃ ┣ 📜552x360-01.jpg
+ ┃ ┃ ┃ ┣ 📜552x360-02.jpg
+ ┃ ┃ ┃ ┣ 📜552x360-03.jpg
+ ┃ ┃ ┃ ┣ 📜552x360-04.jpg
+ ┃ ┃ ┃ ┣ 📜552x360-05.jpg
+ ┃ ┃ ┃ ┗ 📜rutube.jpg
  ┃ ┣ 📜blog-placeholder-1.jpg
  ┃ ┣ 📜blog-placeholder-2.jpg
  ┃ ┣ 📜blog-placeholder-3.jpg
  ┃ ┣ 📜blog-placeholder-4.jpg
  ┃ ┣ 📜blog-placeholder-5.jpg
- ┃ ┗ 📜blog-placeholder-about.jpg
+ ┃ ┣ 📜blog-placeholder-about.jpg
+ ┃ ┣ 📜test-1920.jpg
+ ┃ ┣ 📜test-552-01.jpg
+ ┃ ┣ 📜test-552-02.jpg
+ ┃ ┣ 📜test_img-01.jpg
+ ┃ ┣ 📜test_img-02.jpg
+ ┃ ┣ 📜test_img-03.jpg
+ ┃ ┗ 📜test_img-04.jpg
  ┣ 📂components
  ┃ ┣ 📂partials
  ┃ ┃ ┣ 📜Footer.astro
+ ┃ ┃ ┣ 📜FooterTheme.astro
  ┃ ┃ ┣ 📜Head.astro
+ ┃ ┃ ┣ 📜HeadTheme.astro
  ┃ ┃ ┗ 📜Header.astro
- ┃ ┗ 📂ui
- ┃ ┃ ┣ 📂FeatureList    ✅ new
- ┃ ┃ ┃ ┣ 📜FeatureList.astro    ✅ new
- ┃ ┃ ┃ ┗ 📜FeatureList.astro.md ✅ new
+ ┃ ┣ 📂sections
+ ┃ ┃ ┣ 📜Test100.astro
+ ┃ ┃ ┗ 📜index.ts
+ ┃ ┣ 📂templates
+ ┃ ┃ ┣ 📂hv01
+ ┃ ┃ ┃ ┗ 📜Hv01.astro
+ ┃ ┃ ┣ 📂sv05
+ ┃ ┃ ┃ ┣ 📜Sv05.astro
+ ┃ ┃ ┃ ┗ 📜tempSv05Data.ts
+ ┃ ┃ ┣ 📂sv06
+ ┃ ┃ ┃ ┣ 📜Sv06.astro
+ ┃ ┃ ┃ ┗ 📜tempSv06Data.ts
+ ┃ ┃ ┣ 📂sv07
+ ┃ ┃ ┃ ┗ 📜Svo7.astro
+ ┃ ┃ ┣ 📂sv08
+ ┃ ┃ ┃ ┗ 📜Sv08.astro
+ ┃ ┃ ┗ 📂sv09
+ ┃ ┃ ┃ ┗ 📜Sv09.astro
+ ┃ ┣ 📂ui
+ ┃ ┃ ┣ 📂FeatureList
+ ┃ ┃ ┃ ┣ 📜FeatureList.astro
+ ┃ ┃ ┃ ┗ 📜FeatureList.astro.md
+ ┃ ┃ ┣ 📂card
+ ┃ ┃ ┃ ┣ 📜CardVar02.astro
+ ┃ ┃ ┃ ┣ 📜CardVar03.astro
+ ┃ ┃ ┃ ┣ 📜Cv01.astro
+ ┃ ┃ ┃ ┣ 📜Cv04.astro
+ ┃ ┃ ┃ ┣ 📜Cv05.astro
+ ┃ ┃ ┃ ┣ 📜Cv06.astro
+ ┃ ┃ ┃ ┗ 📜Cv100.astro
+ ┃ ┃ ┣ 📂tabs
+ ┃ ┃ ┃ ┗ 📂tv01
+ ┃ ┃ ┃ ┃ ┗ 📜Tv01.astro
+ ┃ ┃ ┣ 📂theme-control
+ ┃ ┃ ┃ ┗ 📜TcV01.astro
+ ┃ ┃ ┣ 📂title
+ ┃ ┃ ┃ ┣ 📜SectionTitleVar02.astro
+ ┃ ┃ ┃ ┗ 📜TitleV01.astro
  ┃ ┃ ┣ 📜Images.astro
  ┃ ┃ ┣ 📜Link.astro
  ┃ ┃ ┣ 📜Logo.astro
  ┃ ┃ ┣ 📜MenuToggle.astro
  ┃ ┃ ┣ 📜SocialContact.astro
- ┃ ┃ ┗ 📜ThemeToggle.astro
+ ┃ ┃ ┣ 📜ThemeToggle.astro
+ ┃ ┃ ┣ 📜ThemeToggleTheme.astro
+ ┃ ┃ ┗ 📜ThemeVersionSwitcher.astro
+ ┃ ┗ 📜README.md
  ┣ 📂content
  ┃ ┗ 📂blog
  ┃ ┃ ┣ 📜first-post.md
@@ -49,9 +113,18 @@
  ┃ ┃ ┣ 📜programming-post.md
  ┃ ┃ ┣ 📜second-post.md
  ┃ ┃ ┗ 📜third-post.md
+ ┣ 📂data
+ ┃ ┣ 📂pages
+ ┃ ┃ ┣ 📂contacts
+ ┃ ┃ ┣ 📂galery
+ ┃ ┃ ┗ 📂home
+ ┃ ┣ 📜README.md
+ ┃ ┣ 📜navigation.ts
+ ┃ ┗ 📜site-config.ts
  ┣ 📂layouts
  ┃ ┣ 📜BlogPost.astro
- ┃ ┗ 📜PagesLayout.astro
+ ┃ ┣ 📜PagesLayout.astro
+ ┃ ┗ 📜PagesLayoutTheme.astro
  ┣ 📂pages
  ┃ ┣ 📂blog
  ┃ ┃ ┣ 📜[...slug].astro
@@ -72,9 +145,10 @@
  ┃ ┃ ┃ ┣ 📜_utilites.scss
  ┃ ┃ ┃ ┣ 📜adaptiveValue.scss
  ┃ ┃ ┃ ┗ 📜grid.scss
+ ┃ ┃ ┣ 📜animations.scss
  ┃ ┃ ┣ 📜base.scss
  ┃ ┃ ┣ 📜button.scss
- ┃ ┃ ┣ 📜common.scss    ✅ add classes
+ ┃ ┃ ┣ 📜common.scss
  ┃ ┃ ┣ 📜media-new.scss
  ┃ ┃ ┣ 📜media.scss
  ┃ ┃ ┣ 📜mixins.scss
@@ -88,17 +162,120 @@
  ┃ ┃ ┣ 📜form.scss
  ┃ ┃ ┗ 📜spollers.scss
  ┃ ┣ 📂themes
- ┃ ┃ ┗ 📂v_01
+ ┃ ┃ ┣ 📂v_01
  ┃ ┃ ┃ ┣ 📜M3.json
+ ┃ ┃ ┃ ┣ 📜dark.scss
+ ┃ ┃ ┃ ┗ 📜light.scss
+ ┃ ┃ ┣ 📂v_02
+ ┃ ┃ ┃ ┣ 📜dark.scss
+ ┃ ┃ ┃ ┗ 📜light.scss
+ ┃ ┃ ┣ 📂v_03
+ ┃ ┃ ┃ ┣ 📜dark.scss
+ ┃ ┃ ┃ ┗ 📜light.scss
+ ┃ ┃ ┣ 📂v_04
+ ┃ ┃ ┃ ┣ 📜dark.scss
+ ┃ ┃ ┃ ┗ 📜light.scss
+ ┃ ┃ ┗ 📂v_05
  ┃ ┃ ┃ ┣ 📜dark.scss
  ┃ ┃ ┃ ┗ 📜light.scss
  ┃ ┣ 📂utils
  ┃ ┃ ┗ 📜_focus-visible.scss
  ┃ ┗ 📜global.scss
+ ┣ 📂utils
+ ┃ ┣ 📜dom.ts
+ ┃ ┣ 📜domDocs.md
+ ┃ ┣ 📜index.ts
+ ┃ ┣ 📜theme.ts
+ ┃ ┣ 📜tv01.ts
+ ┃ ┗ 📜validate-data.ts
  ┣ 📜consts.ts
  ┗ 📜content.config.ts
+
 ```
 
 ### [0.1.0] - Дата прошлого релиза
 
 - Initial release starter template.
+
+---
+
+## Добавлено
+
+папка для секций - `src/components/sections`
+
+теперь кроме компонентов карточки, списки и проч. можно хранить секции как компоненты целиком, так же контент компонентов будет выноситься в отдельный файл `data.ts`
+
+- Добавлена папка `src/data` -
+- Добавлена папка `src/hooks`
+- Добавлен файл `src/components/sections/index.ts`
+
+- Добавлены новые алиасы в файл `tsconfig.json` под обновлённую структуру:
+- `@data/*` — для файлов с данными секций
+- `@hooks/*` — для JS-логики
+- `@utils/*` — для хелпер-функций
+- `@sections/*` — для готовых секций (отдельно от UI)
+
+## 🚀 Что было сделано в версии 0.3.0
+
+### 📁 Архитектура проекта
+
+- ✅ Организована структура компонентов: `ui/`, `sections/`, `partials/`
+- ✅ Вынесены все данные в `src/data/sections/` (отделение контента от кода)
+- ✅ Создана папка `src/components/sections` для
+- ✅ Создана папка утилит `src/utils/` для валидации и
+
+- ✅ Создан файл `src/utils/index.ts` для...
+- ✅ Создана папка утилит `src/hooks/` для...
+- ✅ Создан файл `src/hooks/index.ts` для...
+
+- ✅ Настроены алиасы импортов (`@data/`, `@utils/`)
+
+### 🔒 Типобезопасность
+
+- ✅ Все компоненты типизированы через `export interface Props`
+- ✅ Импорт типов через `import type` (не попадает в билд)
+- ✅ Валидация данных при сборке (проверка уникальности `id`, обязательных полей)
+- ✅ Исправлен `tsconfig.json` (убраны пробелы в кавычках)
+
+### ♿ Доступность (a11y)
+
+- ✅ Обязательные `alt` для всех изображений
+- ✅ Семантические теги (`<nav>`, `<main>`, `<button>`)
+- ✅ Иерархия заголовков без пропусков
+- ✅ Видимый фокус на интерактивных элементах
+
+### 📚 Документация
+
+- ✅ Создана методичка разработчика: `src/components/README.md`
+- ✅ Описаны правила нейминга (PascalCase, kebab-case)
+- ✅ Добавлены запрещённые приёмы (памятка)
+- ✅ Финальный чек-лист перед коммитом
+
+### 🛠 Утилиты
+
+- ✅ Валидация уникальности `id` через `Set`
+- ✅ Проверка обязательных полей в данных
+- ✅ Комплексная валидация для карточек (`validateCardsData`)
+
+---
+
+## 📋 Чек-лист для перехода на v0.3.1
+
+## Внимание!!! Добавлены новые компоненты, но не все адаптированы
+
+Внимательно перед добавлением компонентов по данным путям -
+
+- _src/components/templates_
+- _src/components/ui_
+
+---
+
+## 🔄 История версий
+
+| Версия | Дата       | Изменения                                  |
+| ------ | ---------- | ------------------------------------------ |
+| 0.3.1  | 2026-02-29 | Добавлены новые компоненты                 |
+| 0.3.0  | 2026-02-27 | Архитектура, валидация, a11y, документация |
+| 0.1.0  | 2026-02-xx | Базовая версия шаблона                     |
+
+src/components/templates

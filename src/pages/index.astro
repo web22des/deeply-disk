@@ -1,12 +1,18 @@
 ---
-import PagesLayout from "../layouts/PagesLayout.astro";
+import Test100 from "@components/sections/Test100.astro";
+import Sv05 from "@components/templates/sv05/Sv05.astro";
+
+import PagesLayoutTheme from "@layouts/PagesLayoutTheme.astro";
 ---
 
-<PagesLayout seo={{ 
-    title: "Главная страница", 
-    description: "Свяжитесь с нами для сотрудничества", 
-    keywords: "контакты, связь, сотрудничество", 
-    noIndex: false 
-    }}>
+<PagesLayoutTheme
+    seo={{
+        title: "Главная страница",
+        description: "Свяжитесь с нами для сотрудничества",
+        keywords: "контакты, связь, сотрудничество",
+        noIndex: false,
+    }}
+>
     <h1>Главная страница</h1>
-</PagesLayout>
+    <Test100 />
+</PagesLayoutTheme>
