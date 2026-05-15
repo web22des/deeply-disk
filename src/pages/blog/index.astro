@@ -2,16 +2,16 @@
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 
-import PagesLayout from "@layouts/PagesLayout.astro";
+import PagesLayoutTheme from "@layouts/PagesLayoutTheme.astro";
 import Link from "@components/ui/Link.astro";
 
 // сортировка постов по дате публикации - от новых к старым
 const posts = (await getCollection("blog")).sort(
-    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
 
-<PagesLayout>
+<PagesLayoutTheme>
     <div class="wrap__container">
         <h1>Список постов</h1>
         <p>Сортировка по дате</p>
@@ -51,7 +51,7 @@ const posts = (await getCollection("blog")).sort(
             }
         </ul>
     </div>
-</PagesLayout>
+</PagesLayoutTheme>
 
 <style lang="scss">
     @use "@styles/base/media-new.scss" as *;

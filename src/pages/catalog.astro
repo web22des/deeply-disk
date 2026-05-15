@@ -1,18 +1,14 @@
 ---
-
-import PagesLayout from "@layouts/PagesLayout.astro";
+import PagesLayoutTheme from "@layouts/PagesLayoutTheme.astro";
 ---
 
-<PagesLayout seo={{ 
-    title: "Другая страница", 
-    description: "Свяжитесь с нами для сотрудничества", 
-    keywords: "контакты, связь, сотрудничество", 
-    noIndex: false 
-    }}>
+<PagesLayoutTheme
+    seo={{
+        title: "Другая страница",
+        description: "Свяжитесь с нами для сотрудничества",
+        keywords: "контакты, связь, сотрудничество",
+        noIndex: false,
+    }}
+>
     <h1>Другая страница</h1>
-
-    <div class="">
-        <!-- <WebsiteTypes /> -->
-    </div>
-
-</PagesLayout>
+</PagesLayoutTheme>

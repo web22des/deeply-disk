@@ -2,6 +2,8 @@
 // src/layouts/PagesLayoutTheme.astro
 // ✅ Layout: структура + анимация панели + задержки для вложенных элементов
 // ✅ TcV01: внутренняя логика темы (переключатели)
+import "@styles/base/variables.scss";
+import "@styles/utils/_focus-visible.scss";
 
 import Footer from "@components/partials/Footer.astro";
 import Header from "@components/partials/Header.astro";
@@ -68,8 +70,8 @@ const {
 </html>
 
 <style lang="scss" is:global>
-    @use "@styles/base/variables.scss" as *;
-    @use "@styles/utils/_focus-visible.scss" as *;
+    // @use "@styles/base/variables.scss" as *;
+    // @use "@styles/utils/_focus-visible.scss" as *;
 
     // =============================================================================
     // 🔧 АНИМАЦИЯ ПАНЕЛИ

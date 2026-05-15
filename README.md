@@ -1,4 +1,4 @@
-# Astro Starter Kit
+# Astro Starter Kit - deeply-disk `"version": "1.0.0"`
 
 ## 🧞 Commands
 
@@ -13,6 +13,14 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
+## Что в коробке
+
+**Список дополнится в ходе разработки**
+
+- Стилизация на scss
+- Управление контентом из `src/data/`
+- Шрифты в `public/fonts/`
+
 ### Содержание стартового шаблона (описаны изменения от дефолтного шаблона)
 
 1. .github/workflows/deploy.yml
@@ -25,9 +33,309 @@ All commands are run from the root of the project, from a terminal:
 8. public/fonts/
 9. public/images/
 
+### Структура папок
+
+`public`
+
+```txt
+📦public
+ ┣ 📂favicon
+ ┃ ┣ 📜android-chrome-192x192.png
+ ┃ ┣ 📜android-chrome-512x512.png
+ ┃ ┣ 📜apple-touch-icon.png
+ ┃ ┣ 📜browserconfig.xml
+ ┃ ┣ 📜favicon-16x16.png
+ ┃ ┣ 📜favicon-32x32.png
+ ┃ ┣ 📜favicon.ico
+ ┃ ┣ 📜mstile-144x144.png
+ ┃ ┣ 📜mstile-150x150.png
+ ┃ ┣ 📜mstile-310x150.png
+ ┃ ┣ 📜mstile-310x310.png
+ ┃ ┣ 📜mstile-70x70.png
+ ┃ ┣ 📜safari-pinned-tab.svg
+ ┃ ┗ 📜site.webmanifest
+ ┣ 📂fonts
+ ┃ ┣ 📜Roboto-Bold.woff2
+ ┃ ┣ 📜Roboto-Medium.woff2
+ ┃ ┣ 📜Roboto-Regular.woff2
+ ┃ ┗ 📜icomoon.woff2
+ ┗ 📂images
+ ┃ ┗ 📂logo
+ ┃ ┃ ┣ 📜logo-dark.svg
+ ┃ ┃ ┣ 📜logo-light.svg
+ ┃ ┃ ┗ 📜logo.svg
+```
+
+`src`
+
+```txt
+📦src
+ ┣ 📂assets
+ ┃ ┣ 📂programming
+ ┃ ┃ ┗ 📜06.jpg
+ ┃ ┣ 📂temp
+ ┃ ┃ ┣ 📂avatars
+ ┃ ┃ ┃ ┣ 📜av-01.png
+ ┃ ┃ ┃ ┣ 📜av-02.png
+ ┃ ┃ ┃ ┣ 📜av-03.png
+ ┃ ┃ ┃ ┣ 📜av-04.png
+ ┃ ┃ ┃ ┗ 📜av-05.png
+ ┃ ┃ ┗ 📂images
+ ┃ ┃ ┃ ┣ 📜360-01.jpg
+ ┃ ┃ ┃ ┣ 📜360-02.jpg
+ ┃ ┃ ┃ ┣ 📜360х168-01.jpg
+ ┃ ┃ ┃ ┣ 📜360х168-02.jpg
+ ┃ ┃ ┃ ┣ 📜552x360-01.jpg
+ ┃ ┃ ┃ ┣ 📜552x360-02.jpg
+ ┃ ┃ ┃ ┣ 📜552x360-03.jpg
+ ┃ ┃ ┃ ┣ 📜552x360-04.jpg
+ ┃ ┃ ┃ ┣ 📜552x360-05.jpg
+ ┃ ┃ ┃ ┗ 📜rutube.jpg
+ ┃ ┣ 📜blog-placeholder-1.jpg
+ ┃ ┣ 📜blog-placeholder-2.jpg
+ ┃ ┣ 📜blog-placeholder-3.jpg
+ ┃ ┣ 📜blog-placeholder-4.jpg
+ ┃ ┣ 📜blog-placeholder-5.jpg
+ ┃ ┣ 📜blog-placeholder-about.jpg
+ ┃ ┣ 📜test-1920.jpg
+ ┃ ┣ 📜test-552-01.jpg
+ ┃ ┣ 📜test-552-02.jpg
+ ┃ ┣ 📜test_img-01.jpg
+ ┃ ┣ 📜test_img-02.jpg
+ ┃ ┣ 📜test_img-03.jpg
+ ┃ ┗ 📜test_img-04.jpg
+ ┣ 📂components
+ ┃ ┣ 📂partials
+ ┃ ┃ ┣ 📜Footer.astro
+ ┃ ┃ ┣ 📜FooterTheme.astro
+ ┃ ┃ ┣ 📜Head.astro
+ ┃ ┃ ┣ 📜HeadTheme.astro
+ ┃ ┃ ┗ 📜Header.astro
+ ┃ ┣ 📂sections
+ ┃ ┃ ┣ 📜Test100.astro
+ ┃ ┃ ┗ 📜index.ts
+ ┃ ┣ 📂templates
+ ┃ ┃ ┣ 📂hv01
+ ┃ ┃ ┃ ┗ 📜Hv01.astro
+ ┃ ┃ ┣ 📂sv05
+ ┃ ┃ ┃ ┣ 📜Sv05.astro
+ ┃ ┃ ┃ ┗ 📜tempSv05Data.ts
+ ┃ ┃ ┣ 📂sv06
+ ┃ ┃ ┃ ┣ 📜Sv06.astro
+ ┃ ┃ ┃ ┗ 📜tempSv06Data.ts
+ ┃ ┃ ┣ 📂sv07
+ ┃ ┃ ┃ ┗ 📜Svo7.astro
+ ┃ ┃ ┣ 📂sv08
+ ┃ ┃ ┃ ┗ 📜Sv08.astro
+ ┃ ┃ ┗ 📂sv09
+ ┃ ┃ ┃ ┗ 📜Sv09.astro
+ ┃ ┣ 📂ui
+ ┃ ┃ ┣ 📂FeatureList
+ ┃ ┃ ┃ ┣ 📜FeatureList.astro
+ ┃ ┃ ┃ ┗ 📜FeatureList.astro.md
+ ┃ ┃ ┣ 📂card
+ ┃ ┃ ┃ ┣ 📜CardVar02.astro
+ ┃ ┃ ┃ ┣ 📜CardVar03.astro
+ ┃ ┃ ┃ ┣ 📜Cv01.astro
+ ┃ ┃ ┃ ┣ 📜Cv04.astro
+ ┃ ┃ ┃ ┣ 📜Cv05.astro
+ ┃ ┃ ┃ ┣ 📜Cv06.astro
+ ┃ ┃ ┃ ┗ 📜Cv100.astro
+ ┃ ┃ ┣ 📂tabs
+ ┃ ┃ ┃ ┗ 📂tv01
+ ┃ ┃ ┃ ┃ ┗ 📜Tv01.astro
+ ┃ ┃ ┣ 📂theme-control
+ ┃ ┃ ┃ ┗ 📜TcV01.astro
+ ┃ ┃ ┣ 📂title
+ ┃ ┃ ┃ ┣ 📜SectionTitleVar02.astro
+ ┃ ┃ ┃ ┗ 📜TitleV01.astro
+ ┃ ┃ ┣ 📜Images.astro
+ ┃ ┃ ┣ 📜Link.astro
+ ┃ ┃ ┣ 📜Logo.astro
+ ┃ ┃ ┣ 📜MenuToggle.astro
+ ┃ ┃ ┣ 📜SocialContact.astro
+ ┃ ┃ ┣ 📜ThemeToggle.astro
+ ┃ ┃ ┣ 📜ThemeToggleTheme.astro
+ ┃ ┃ ┗ 📜ThemeVersionSwitcher.astro
+ ┃ ┗ 📜README.md
+ ┣ 📂content
+ ┃ ┗ 📂blog
+ ┃ ┃ ┣ 📜first-post.md
+ ┃ ┃ ┣ 📜markdown-style-guide.md
+ ┃ ┃ ┣ 📜programming-post.md
+ ┃ ┃ ┣ 📜second-post.md
+ ┃ ┃ ┗ 📜third-post.md
+ ┣ 📂data
+ ┃ ┣ 📜README.md
+ ┃ ┣ 📜navigation.ts
+ ┃ ┗ 📜site-config.ts
+ ┣ 📂layouts
+ ┃ ┣ 📜BlogPost.astro
+ ┃ ┣ 📜PagesLayout.astro
+ ┃ ┗ 📜PagesLayoutTheme.astro
+ ┣ 📂pages
+ ┃ ┣ 📂blog
+ ┃ ┃ ┣ 📜[...slug].astro
+ ┃ ┃ ┗ 📜index.astro
+ ┃ ┣ 📜catalog.astro
+ ┃ ┣ 📜contacts.astro
+ ┃ ┗ 📜index.astro
+ ┣ 📂styles
+ ┃ ┣ 📂base
+ ┃ ┃ ┣ 📂mixins
+ ┃ ┃ ┃ ┣ 📜_adaptive.scss
+ ┃ ┃ ┃ ┣ 📜_counter.scss
+ ┃ ┃ ┃ ┣ 📜_fontfase.scss
+ ┃ ┃ ┃ ┣ 📜_math.scss
+ ┃ ┃ ┃ ┣ 📜_rem-em.scss
+ ┃ ┃ ┃ ┣ 📜_transparent-color.scss
+ ┃ ┃ ┃ ┣ 📜_truncate-text.scss
+ ┃ ┃ ┃ ┣ 📜_utilites.scss
+ ┃ ┃ ┃ ┣ 📜adaptiveValue.scss
+ ┃ ┃ ┃ ┗ 📜grid.scss
+ ┃ ┃ ┣ 📜animations.scss
+ ┃ ┃ ┣ 📜base.scss
+ ┃ ┃ ┣ 📜button.scss
+ ┃ ┃ ┣ 📜common.scss
+ ┃ ┃ ┣ 📜media-new.scss
+ ┃ ┃ ┣ 📜media.scss
+ ┃ ┃ ┣ 📜mixins.scss
+ ┃ ┃ ┣ 📜null.scss
+ ┃ ┃ ┣ 📜scroll.scss
+ ┃ ┃ ┗ 📜variables.scss
+ ┃ ┣ 📂fonts
+ ┃ ┃ ┣ 📜fonts.scss
+ ┃ ┃ ┗ 📜icons.scss
+ ┃ ┣ 📂libs
+ ┃ ┃ ┣ 📜form.scss
+ ┃ ┃ ┗ 📜spollers.scss
+ ┃ ┣ 📂themes
+ ┃ ┃ ┣ 📂v_01
+ ┃ ┃ ┃ ┣ 📜M3.json
+ ┃ ┃ ┃ ┣ 📜dark.scss
+ ┃ ┃ ┃ ┗ 📜light.scss
+ ┃ ┃ ┣ 📂v_02
+ ┃ ┃ ┃ ┣ 📜dark.scss
+ ┃ ┃ ┃ ┗ 📜light.scss
+ ┃ ┃ ┣ 📂v_03
+ ┃ ┃ ┃ ┣ 📜dark.scss
+ ┃ ┃ ┃ ┗ 📜light.scss
+ ┃ ┃ ┣ 📂v_04
+ ┃ ┃ ┃ ┣ 📜dark.scss
+ ┃ ┃ ┃ ┗ 📜light.scss
+ ┃ ┃ ┗ 📂v_05
+ ┃ ┃ ┃ ┣ 📜dark.scss
+ ┃ ┃ ┃ ┗ 📜light.scss
+ ┃ ┣ 📂utils
+ ┃ ┃ ┗ 📜_focus-visible.scss
+ ┃ ┗ 📜global.scss
+ ┣ 📂utils
+ ┃ ┣ 📜dom.ts
+ ┃ ┣ 📜domDocs.md
+ ┃ ┣ 📜index.ts
+ ┃ ┣ 📜theme.ts
+ ┃ ┣ 📜tv01.ts
+ ┃ ┗ 📜validate-data.ts
+ ┣ 📜consts.ts
+ ┗ 📜content.config.ts
+```
+
+### Содержание основных файлов
+
+- `package.json`
+
+```json
+{
+    "name": "deeply-disk",
+    "type": "module",
+    "version": "0.3.1",
+    "scripts": {
+        "dev": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro"
+    },
+    "dependencies": {
+        "astro": "^5.18.0"
+    },
+    "devDependencies": {
+        "sass-embedded": "^1.93.2"
+    }
+}
+```
+
+- `astro.config.mjs`
+
+```mjs
+// @ts-check
+import { defineConfig } from "astro/config";
+
+// https://astro.build/config
+export default defineConfig({
+    output: "static",
+    site: "https://web22des.github.io",
+    base: "deeply-disk",
+});
+```
+
+- `tsconfig.json`
+
+```json
+{
+    "extends": "astro/tsconfigs/strict",
+    "include": [".astro/types.d.ts", "src/**/*"],
+    "exclude": ["dist"],
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@assets/*": ["./src/assets/*"],
+            "@components/*": ["./src/components/*"],
+            "@sections/*": ["./src/components/sections/*"],
+            "@templates/*": ["./src/components/templates/*"],
+            "@ui/*": ["./src/components/ui/*"],
+            "@content/*": ["./src/content/*"],
+            "@layouts/*": ["./src/layouts/*"],
+            "@pages/*": ["./src/pages/*"],
+            "@styles/*": ["./src/styles/*"],
+            "@data/*": ["./src/data/*"],
+            "@hooks/*": ["./src/hooks/*"],
+            "@utils/*": ["./src/utils/*"]
+        }
+    }
+}
+```
+
+- `src/consts.ts`
+
+```ts
+export const SITE_TITLE = "Astro Blog";
+export const SITE_DESCRIPTION = "Welcome to my website!";
+
+export const SITE_MAIL = "info@mail.ru";
+export const SITE_PHONE = "+79998887766";
+export const SITE_SOCIAL_MAX = "https://max.ru";
+export const SITE_SOCIAL_VK = "https://vk.ru";
+```
+
+- `src/components/ui/Link.astro`
+
+```astro
+---
+// src/components/ui/Link.astro
+const { href, ...props } = Astro.props;
+const resolvedHref = import.meta.env.BASE_URL + href.replace(/^\//, '/');
+---
+
+<a href={resolvedHref} {...props}>
+  <slot />
+</a>
+```
+
+---
+
 #### Ошибки
 
-1. Не обнаружено
+1. При переходе на новую страницу, цветовая схема сбрасывается в дефолт
 
 #### Что надо сделать
 
@@ -51,151 +359,11 @@ All commands are run from the root of the project, from a terminal:
 
 ❌ — для того, чего делать не стоит
 
-# deeply-disk `"version": "0.0.1"`
-
 ### Правила увеличения версий:
 
 - PATCH (+0.0.1) - исправил баг, опечатку
 - MINOR (+0.1.0) - добавил новый функционал (блог)
 - MAJOR (+1.0.0) - ломающие изменения
-
-# deeply-disk `"version": "0.1.0"`
-
-### В шаблон добавлен блог
-
-**Структура проекта немного изменилась**
-
-1. добавлена папка `src/content`
-
-```txt
-📦content
- ┣ 📂blog
- ┃ ┣ 📜first-post.md
- ┃ ┣ 📜markdown-style-guide.md
- ┃ ┣ 📜programming-post.md
- ┃ ┣ 📜second-post.md
- ┃ ┣ 📜third-post.md
- ┃ ┗ 📜using-mdx.mdx
- ┗ 📂test
-```
-
-2. добавлены
-
-- `src/pages/blog`
-- `src/pages/blog/[...slug].astro`
-- `src/pages/blog/index.astro`
-
-```txt
-📦pages
- ┣ 📂blog
- ┃ ┣ 📜[...slug].astro
- ┃ ┗ 📜index.astro
- ┣ 📜catalog.astro
- ┣ 📜contacts.astro
- ┗ 📜index.astro
-```
-
-3. добавлены
-
-- `src/consts.ts`
-- `src/content.config.ts`
-
-```txt
-📦src
- ┣ 📜consts.ts
- ┗ 📜content.config.ts
-```
-
-### Структура
-
-Структура папки `src` в шаблоне **deeply-disk `"version": "0.1.0"`**
-
-```txt
-📦src
- ┣ 📂assets
- ┃ ┣ 📂programming  ✅ — добавлено
- ┃ ┃ ┗ 📜06.jpg     ✅ — добавлено
- ┃ ┣ 📜blog-placeholder-1.jpg
- ┃ ┣ 📜blog-placeholder-2.jpg
- ┃ ┣ 📜blog-placeholder-3.jpg
- ┃ ┣ 📜blog-placeholder-4.jpg
- ┃ ┣ 📜blog-placeholder-5.jpg
- ┃ ┗ 📜blog-placeholder-about.jpg
- ┣ 📂components
- ┃ ┣ 📂partials
- ┃ ┃ ┣ 📜Footer.astro
- ┃ ┃ ┣ 📜Head.astro
- ┃ ┃ ┗ 📜Header.astro
- ┃ ┗ 📂ui
- ┃ ┃ ┣ 📜Images.astro
- ┃ ┃ ┣ 📜Link.astro
- ┃ ┃ ┣ 📜Logo.astro
- ┃ ┃ ┣ 📜MenuToggle.astro
- ┃ ┃ ┣ 📜SocialContact.astro
- ┃ ┃ ┗ 📜ThemeToggle.astro
- ┣ 📂content    ✅ — добавлено
- ┃ ┣ 📂blog     ✅ — добавлено
- ┃ ┃ ┣ 📜first-post.md  ✅ — добавлено
- ┃ ┃ ┣ 📜markdown-style-guide.md    ✅ — добавлено
- ┃ ┃ ┣ 📜programming-post.md    ✅ — добавлено
- ┃ ┃ ┣ 📜second-post.md         ✅ — добавлено
- ┃ ┃ ┗ 📜third-post.md          ✅ — добавлено
- ┃ ┗ 📂test                     ✅ — добавлено
- ┣ 📂layouts
- ┃ ┣ 📜BlogPost.astro
- ┃ ┗ 📜PagesLayout.astro
- ┣ 📂pages
- ┃ ┣ 📂blog                 ✅ — добавлено
- ┃ ┃ ┣ 📜[...slug].astro    ✅ — добавлено
- ┃ ┃ ┗ 📜index.astro        ✅ — добавлено
- ┃ ┣ 📜catalog.astro
- ┃ ┣ 📜contacts.astro
- ┃ ┗ 📜index.astro
- ┣ 📂styles
- ┃ ┣ 📂base
- ┃ ┃ ┣ 📂mixins
- ┃ ┃ ┃ ┣ 📜_adaptive.scss
- ┃ ┃ ┃ ┣ 📜_counter.scss
- ┃ ┃ ┃ ┣ 📜_fontfase.scss
- ┃ ┃ ┃ ┣ 📜_math.scss
- ┃ ┃ ┃ ┣ 📜_rem-em.scss
- ┃ ┃ ┃ ┣ 📜_transparent-color.scss
- ┃ ┃ ┃ ┣ 📜_truncate-text.scss
- ┃ ┃ ┃ ┣ 📜_utilites.scss
- ┃ ┃ ┃ ┣ 📜adaptiveValue.scss
- ┃ ┃ ┃ ┗ 📜grid.scss
- ┃ ┃ ┣ 📜base.scss
- ┃ ┃ ┣ 📜button.scss
- ┃ ┃ ┣ 📜common.scss
- ┃ ┃ ┣ 📜media-new.scss
- ┃ ┃ ┣ 📜media.scss
- ┃ ┃ ┣ 📜mixins.scss
- ┃ ┃ ┣ 📜null.scss
- ┃ ┃ ┣ 📜scroll.scss
- ┃ ┃ ┗ 📜variables.scss
- ┃ ┣ 📂fonts
- ┃ ┃ ┣ 📜fonts.scss
- ┃ ┃ ┗ 📜icons.scss
- ┃ ┣ 📂libs
- ┃ ┃ ┣ 📜form.scss
- ┃ ┃ ┗ 📜spollers.scss
- ┃ ┣ 📂themes
- ┃ ┃ ┗ 📂v_01
- ┃ ┃ ┃ ┣ 📜M3.json
- ┃ ┃ ┃ ┣ 📜dark.scss
- ┃ ┃ ┃ ┗ 📜light.scss
- ┃ ┣ 📂utils
- ┃ ┃ ┗ 📜_focus-visible.scss
- ┃ ┗ 📜global.scss
- ┣ 📜consts.ts          ✅ — добавлено
- ┗ 📜content.config.ts  ✅ — добавлено
-```
-
-## 📜 История версий
-
-### deeply-disk `"version": "0.2.0"`
-
-Подробный список изменений доступен в файле `CHANGELOG.md`
 
 # Что исправить
 
@@ -217,19 +385,3 @@ All commands are run from the root of the project, from a terminal:
 - `src/data/sections/StaVar02.ts` переименовать в `src/data/sections/Секция_проекта.ts`
 
 ---
-
-- Добавлена структура папок для временных изображений (для разработки шаблона)
-
-```txt
-📦assets
- ┣ 📂temp
- ┃ ┣ 📂avatars
- ┃ ┃ ┣ 📜av-01.png
- ┃ ┃ ┣ 📜av-02.png
- ┃ ┃ ┣ 📜av-03.png
- ┃ ┃ ┣ 📜av-04.png
- ┃ ┃ ┗ 📜av-05.png
- ┃ ┣ 📂images
- ┃ ┗ 📂logo
-
-```
