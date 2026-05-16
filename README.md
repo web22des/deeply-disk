@@ -19,19 +19,19 @@ All commands are run from the root of the project, from a terminal:
 
 - Стилизация на scss
 - Управление контентом из `src/data/`
-- Шрифты в `public/fonts/`
+- Шрифты в `public/fonts/` - формат `.ttf`
 
 ### Содержание стартового шаблона (описаны изменения от дефолтного шаблона)
 
-1. .github/workflows/deploy.yml
-2. .vscode/2025.code-snippets
-3. .vscode/settings.json
-4. scripts/
-5. src/styles/
-6. src/partials/
-7. public/favicon/
-8. public/fonts/
-9. public/images/
+1. `.github/workflows/deploy.yml` - файл настройки для деплоя на github
+2. `.vscode/2025.code-snippets` - сниппеты
+3. `.vscode/settings.json` - настроики VsCode
+4. `scripts/`
+5. `src/styles/` - тут все стили
+6. `src/partials/` - основные компоненты (`head`, `footer`, `header`)
+7. `public/favicon/` - фавиконки сайта
+8. `public/fonts/` - шрифты в формате `.ttf`
+9. `public/images/`- папка для логотипа формат `.svg`
 
 ### Структура папок
 
@@ -339,15 +339,15 @@ const resolvedHref = import.meta.env.BASE_URL + href.replace(/^\//, '/');
 
 #### Что надо сделать
 
-1. Задача не поставлена
+1. Заменить формат базовых шрифтов `.woff` на `.ttf`
 
 **⚠️ Важно **
 
 `Изменить название проекта на свой в файлах`
 
 1. src/styles/fonts/fonts.scss
-1. astro.config.mjs
-1. package.json
+2. astro.config.mjs
+3. package.json
 
 Полезные эмодзи:
 
