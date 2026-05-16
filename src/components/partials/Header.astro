@@ -1,21 +1,24 @@
 ---
 //src/components/partials/Header.astro
-import Link from "@ui/Link.astro";
+import LinkActive from "@components/ui/link/LinkActive.astro";
+import Link from "@components/ui/link/Link.astro";
 ---
 
 <header class="header">
     <div class="header__container">
         <nav>
             <div>
-                <h2><Link href="/">Astro Starter Kit - deeply-disk </Link></h2>
+                <h2>
+                    <Link href="/">Astro Starter Kit - deeply-disk </Link>
+                </h2>
                 <span>version: "1.0.0"</span>
             </div>
-            <div class="internal-links">
-                <Link href="/">Главная</Link>
-                <Link href="/catalog/">Страница</Link>
-                <Link href="/blog/">Блог</Link>
-                <Link href="/contacts/">Контакты</Link>
-            </div>
+            <ul class="internal-links">
+                <LinkActive href="/">Главная</LinkActive>
+                <LinkActive href="/catalog/">Страница</LinkActive>
+                <LinkActive href="/blog/">Блог</LinkActive>
+                <LinkActive href="/contacts/">Контакты</LinkActive>
+            </ul>
         </nav>
     </div>
 </header>
@@ -24,10 +27,7 @@ import Link from "@ui/Link.astro";
     nav {
         display: flex;
         justify-content: space-between;
-    }
-    a {
-        text-transform: uppercase;
-        margin-right: 24px;
+        align-items: center;
     }
 
     .header {
@@ -47,5 +47,10 @@ import Link from "@ui/Link.astro";
             text-transform: none;
             display: inline-block;
         }
+    }
+
+    .internal-links {
+        display: flex;
+        gap: 50px;
     }
 </style>

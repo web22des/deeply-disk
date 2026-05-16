@@ -1,0 +1,30 @@
+---
+// src/components/ui/Link.astro
+import type { HTMLAttributes } from "astro/types";
+
+type Props = HTMLAttributes<"a"> & { href: string };
+
+const { href, class: className, ...props } = Astro.props as Props;
+
+// Формируем итоговый href с учётом BASE_URL (для GitHub Pages)
+const resolvedHref = import.meta.env.BASE_URL + href.replace(/^\//, "/");
+
+// Определяем активное состояние (точное совпадение пути)
+const cleanPath =
+    Astro.url.pathname.replace(import.meta.env.BASE_URL, "") || "/";
+const isActive = href === cleanPath;
+---
+
+<a
+    href={resolvedHref}
+    class:list={[className, { active: isActive }]}
+    {...props}
+>
+    <slot />
+</a>
+
+<style>
+    a.active {
+        text-decoration: underline;
+    }
+</style>

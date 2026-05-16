@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 
 import PagesLayoutTheme from "@layouts/PagesLayoutTheme.astro";
-import Link from "@components/ui/Link.astro";
+import Link from "@components/ui/link/Link.astro";
 
 // сортировка постов по дате публикации - от новых к старым
 const posts = (await getCollection("blog")).sort(

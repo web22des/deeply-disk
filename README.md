@@ -23,15 +23,16 @@ All commands are run from the root of the project, from a terminal:
 
 ### Содержание стартового шаблона (описаны изменения от дефолтного шаблона)
 
-1. `.github/workflows/deploy.yml` - файл настройки для деплоя на github
-2. `.vscode/2025.code-snippets` - сниппеты
-3. `.vscode/settings.json` - настроики VsCode
-4. `scripts/`
-5. `src/styles/` - тут все стили
-6. `src/partials/` - основные компоненты (`head`, `footer`, `header`)
-7. `public/favicon/` - фавиконки сайта
-8. `public/fonts/` - шрифты в формате `.ttf`
-9. `public/images/`- папка для логотипа формат `.svg`
+- `.github/workflows/deploy.yml` — конфигурация CI/CD для автоматического деплоя на GitHub Pages
+- `.vscode/2025.code-snippets` — пользовательские сниппеты кода для ускорения разработки в VS Code
+- `.vscode/settings.json` — рекомендуемые настройки редактора (форматирование, линтеры, подсказки)
+- `public/favicon/` — иконки сайта для разных устройств и браузеров
+- `public/fonts/` — локальные шрифты в формате `.ttf` (подключаются через `@font-face`)
+- `public/images/` — статические изображения: логотипы (`.svg`), баннеры, заглушки
+- `scripts/` — утилитарные скрипты для сборки и автоматизации (генерация тем, оптимизация ассетов)
+- `src/data/` — централизованное хранение контента: тексты, конфиги сайта, данные компонентов
+- `src/partials/` — глобальные блоки страниц: `BaseHead.astro`, `Header.astro`, `Footer.astro`
+- `src/styles/` — системные стили: `variables.css` (токены), `reset.css`, `global.css`, `fonts.css`
 
 ### Структура папок
 
@@ -112,7 +113,6 @@ All commands are run from the root of the project, from a terminal:
  ┃ ┃ ┣ 📜HeadTheme.astro
  ┃ ┃ ┗ 📜Header.astro
  ┃ ┣ 📂sections
- ┃ ┃ ┣ 📜Test100.astro
  ┃ ┃ ┗ 📜index.ts
  ┃ ┣ 📂templates
  ┃ ┃ ┣ 📂hv01
@@ -167,6 +167,7 @@ All commands are run from the root of the project, from a terminal:
  ┃ ┃ ┗ 📜third-post.md
  ┣ 📂data
  ┃ ┣ 📜README.md
+ ┃ ┣ 📜content.config.ts
  ┃ ┣ 📜navigation.ts
  ┃ ┗ 📜site-config.ts
  ┣ 📂layouts
@@ -236,8 +237,7 @@ All commands are run from the root of the project, from a terminal:
  ┃ ┣ 📜theme.ts
  ┃ ┣ 📜tv01.ts
  ┃ ┗ 📜validate-data.ts
- ┣ 📜consts.ts
- ┗ 📜content.config.ts
+ ┗ 📜env.d.ts
 ```
 
 ### Содержание основных файлов
@@ -248,7 +248,7 @@ All commands are run from the root of the project, from a terminal:
 {
     "name": "deeply-disk",
     "type": "module",
-    "version": "0.3.1",
+    "version": "1.0.0",
     "scripts": {
         "dev": "astro dev",
         "build": "astro build",
@@ -256,7 +256,7 @@ All commands are run from the root of the project, from a terminal:
         "astro": "astro"
     },
     "dependencies": {
-        "astro": "^5.18.0"
+        "astro": "^6.3.3"
     },
     "devDependencies": {
         "sass-embedded": "^1.93.2"
@@ -286,7 +286,6 @@ export default defineConfig({
     "include": [".astro/types.d.ts", "src/**/*"],
     "exclude": ["dist"],
     "compilerOptions": {
-        "baseUrl": ".",
         "paths": {
             "@assets/*": ["./src/assets/*"],
             "@components/*": ["./src/components/*"],
@@ -296,7 +295,6 @@ export default defineConfig({
             "@content/*": ["./src/content/*"],
             "@layouts/*": ["./src/layouts/*"],
             "@pages/*": ["./src/pages/*"],
-            "@styles/*": ["./src/styles/*"],
             "@data/*": ["./src/data/*"],
             "@hooks/*": ["./src/hooks/*"],
             "@utils/*": ["./src/utils/*"]
@@ -339,7 +337,7 @@ const resolvedHref = import.meta.env.BASE_URL + href.replace(/^\//, '/');
 
 #### Что надо сделать
 
-1. Заменить формат базовых шрифтов `.woff` на `.ttf`
+1. Задача не поставлена
 
 **⚠️ Важно **
 
