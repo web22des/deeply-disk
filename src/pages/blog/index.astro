@@ -11,7 +11,14 @@ const posts = (await getCollection("blog")).sort(
 );
 ---
 
-<PagesLayoutTheme>
+<PagesLayoutTheme
+    seo={{
+        title: "Блог",
+        description: "Интересный блог",
+        keywords: "контакты, связь, сотрудничество",
+        noIndex: false,
+    }}
+>
     <div class="wrap__container">
         <h1>Список постов</h1>
         <p>Сортировка по дате</p>
